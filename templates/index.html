@@ -54,19 +54,32 @@
 
         h1 {
             text-align: center;
-            margin-top: 30px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             margin-top: 150px;
         }
 
-        input[type="file"] {
-            margin-bottom: 20px;
+   /* Styles pour centrer le formulaire */
+   .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
+
+        .form-container form {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            flex: 1; /* L'input file occupe tout l'espace disponible */
+            margin-right: 10px; /* Espacement entre les éléments */
+        }
+
+        input[type="submit"] {
+            flex: none; /* Bouton submit ne prend pas tout l'espace */
+        }
+
 
         input[type="submit"] {
             padding: 8px 16px;
@@ -94,6 +107,34 @@
         .filter-choice label {
             margin-right: 10px;
         }
+          /* Styles pour l'image et les informations sur les filtres */
+          .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            padding: 20px;
+           
+            border-radius: 10px;
+        }
+
+        .image-container img {
+            max-width: 70%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .filter-info {
+            text-align: center;
+        }
+
+        .filter-info p {
+            font-size: 18px;
+            color: #444;
+        }
     </style>
 </head>
 <body>
@@ -102,10 +143,25 @@
         <h1 class="title">Traitement d'image</h1>
         <img src="static/fso.png" alt="Logo de la faculté" class="logo-faculty1">
     </header>
-    <h1>Image Filters</h1>
-    <form action="/apply_filters" method="post" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/*">
-        <input type="submit" value="Apply Filters">
-    </form>
+    <h1>Restauration de Qualité d'Image avec Filtres Wavelet et Wiener</h1>
+ 
+    <div class="filter-info">
+        <p>Les filtres Wavelet et Wiener ont été appliqués pour restaurer la netteté, améliorer les couleurs et réduire le bruit dans l'image restaurée.</p>
+        <p>Offrez une seconde vie à vos images avec notre service de restauration d'images précis et professionnel.</p>
+    </div>
+    <div class="form-container">
+        <!-- Formulaire aligné sur une ligne -->
+        <form action="/apply_filters" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <input type="submit" value="Apply Filters">
+        </form>
+    </div>
+    <div class="image-container">
+       
+        <img src="static/testf.png" alt="" class="restored-image">
+    </div>
+
+    <!-- Informations sur les filtres et le service -->
+    
 </body>
 </html>
