@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Filters</title>
+    <style>
+     
+     header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+            z-index: 1000;
+        }
+
+        .logo-faculty {
+            max-width: 150px;
+            margin-right: 10px;
+        }
+
+        .logo-faculty1 {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 25px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .faculty-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 20px 20px;
+        }
+
+        .faculty-container img {
+            max-width: 150px;
+            height: auto;
+            border: 2px solid #333;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .faculty-container .text-centered {
+            text-align: center;
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 150px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2c75e8;
+        }
+                .filter-info {
+            margin-bottom: 20px;
+        }
+
+        .filter-choice {
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-choice label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="static/ump.png" alt="Logo de la faculté" class="logo-faculty">
+        <h1 class="title">Traitement d'image</h1>
+        <img src="static/fso.png" alt="Logo de la faculté" class="logo-faculty1">
+    </header>
+    <h1>Image Filters</h1>
+    <form action="/apply_filters" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <input type="submit" value="Apply Filters">
+    </form>
+</body>
+</html>
