@@ -1,4 +1,4 @@
-![screen5](https://github.com/ikhlas1936/EnhancedImage/assets/129891260/04874a95-10d6-4551-a60f-6de5388ba5b6)# EnhancedImage
+# EnhancedImage
 Enhanced Image Quality through Wavelet and Wiener Filters
 
 # SCREEN 1 :
