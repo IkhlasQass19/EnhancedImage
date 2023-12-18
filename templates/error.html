@@ -3,8 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Error</title>
+    <style>
+        /* Styles pour l'en-tête */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+            z-index: 1000;
+        }
+
+        .logo-faculty {
+            max-width: 150px;
+            margin-right: 10px;
+        }
+
+        .logo-faculty1 {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 25px;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Styles pour le contenu de la page d'erreur */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 150px;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
+    <!-- En-tête -->
+    <header>
+        <img src="static/ump.png" alt="Logo de la faculté" class="logo-faculty">
+        <h1 class="title">Traitement d'image</h1>
+        <img src="static/fso.png" alt="Logo de la faculté" class="logo-faculty1">
+    </header>
+
+    <!-- Contenu de la page d'erreur -->
     <h1>Une erreur est survenue lors du traitement de l'image.</h1>
     <p>Veuillez réessayer avec une autre image.</p>
 </body>
